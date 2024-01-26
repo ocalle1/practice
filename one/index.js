@@ -35,11 +35,12 @@ function getAge(inputString){
     const seen = new Set();
     
     for(let i = 0; i < a.length; i++) {
-      // if element is already in the set, return it
+      // if element(number) is already(duplicate) seen in the set, then =>
       if(seen.has(a[i])) {
+        // return the duplicte into the new Set
         return a[i]
       }
-      //Add element to the set
+      // if element not seen before, Add element to memory and/or you find a duplicate
       seen.add(a[i])
     }
     // if no duplicate is found, return -1
