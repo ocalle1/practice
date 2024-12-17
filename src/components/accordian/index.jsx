@@ -15,6 +15,7 @@ export default function Accordian() {
     }
     console.log(selected);
     return <div className='wrapper'>
+    <button>Enable Multi Selection</button>
         <div className='accordian'>
             
             {/* the data && data.length is a conditional statement which is conbined by the &&. data = ensures that the data is truthy and data.length>0 ensures that the array is not empty;
