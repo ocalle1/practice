@@ -11,6 +11,7 @@ export default function Accordian() {
     const [selected, setSelected] = useState(null)
 
     function handleSingleSelection(getCurrentId) {
+        //This line toggles the selected  item, if an item is already selected then the item is deselected(nuill)
         setSelected(getCurrentId === selected ? null : getCurrentId);
     }
     console.log(selected);
@@ -30,7 +31,7 @@ export default function Accordian() {
                             <span>+</span>
                         </div>
                         {/* selected is State which is a built-in object that allows components to store and manage data that change over time 
-                        When the event handler  onClick={() => handleSingleSelection(dataItem.id) is clicked the State(selected) evaluates that the dataItem.id element exists and then it renders the JSX {dataItem.answer}*/}
+                        When the event handler  onClick={() => handleSingleSelection(dataItem.id)} is clicked the State(selected) evaluates that the dataItem.id element exists and then it renders the JSX {dataItem.answer}*/}
                         {
                             selected === dataItem.id ?
                                 <div className='content'>{dataItem.answer}</div>
